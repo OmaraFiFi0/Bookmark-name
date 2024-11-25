@@ -29,7 +29,7 @@ function addBook() {
     } else {
       for (i = 0; i < bookList.length; i++) {
         if (bookList[i].siteName.includes(book.siteName) == true) {
-          console.log("This Name  Is Already Here");
+          alert("This Name  Is Already Here");
           bookList.splice(i, 1);
           localStorage.removeItem("books", JSON.stringify(bookList));
         }
