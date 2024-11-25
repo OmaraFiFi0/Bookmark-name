@@ -1,0 +1,56 @@
+body {
+  background-color: rgba(247, 236, 222, 1);
+}
+::selection {
+  background: rgba(254, 194, 96, 1);
+}
+#h1_header {
+  font-family: firstFont;
+  font-size: 4rem;
+  position: relative;
+  margin-bottom: 7rem;
+}
+#h1_header::after {
+  content: "";
+  width: 21rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(254, 194, 96, 1);
+  z-index: -1;
+  transition: all 0.3s;
+}
+#h1_header:hover::after {
+  height: 3rem;
+}
+.item {
+  border-top: 5px black dotted;
+  border-bottom: 5px black dotted;
+}
+.h2 {
+  font-family: secondFont;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(63, 165, 91, 1),
+    rgba(179, 172, 73, 1)
+  );
+  background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+}
+button {
+  width: 170px;
+}
+
+@font-face {
+  font-family: firstFont;
+  src: url(../Fonts/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: secondFont;
+  src: url(../Fonts/Righteous-Regular.ttf);
+}
+
+

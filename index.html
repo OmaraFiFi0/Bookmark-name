@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookMark</title>
+    <link rel="stylesheet" href="CSS/all.min.css" />
+    <link rel="stylesheet" href="CSS/bootstrap.min.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/save_bookmark_icon_176403.png"
+      type="Project-icon"
+    />
+  </head>
+  <body>
+    <!-- CRUD Operation 
+      C ==> Create 
+      R ==> Read or Retrive
+      U ==> Update
+      D ==> Delete
+      S ==> Search 
+    -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1
+            id="h1_header"
+            class="text-center mt-5 col-md-12 d-flex justify-content-center align-items-center"
+          >
+            Bookmarker
+          </h1>
+          <div class="item d-flex flex-column">
+            <h1 class="h2 mt-4 text-center">
+              <i class="fa-solid fa-bookmark"></i>
+              Bookmark your favorite sitess
+              <i class="fa-solid fa-bookmark"></i>
+            </h1>
+            <div class="mb-3">
+              <label for="bookMarkName" class="form-label">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <span class="fw-bold"> Site Name </span>
+              </label>
+              <input
+                type="text"
+                class="form-control fw-semibold fs-5"
+                id="bookMarkName"
+                placeholder="Book Mark Name"
+                oninput="validateInputs(this)"
+              />
+              <div class="alert alert-danger d-none mt-3">
+                at Least Four Charcater
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="url" class="form-label">
+                <i class="fa-solid fa-link"></i>
+                <span class="fw-bold"> Site URL </span>
+              </label>
+              <input
+                type="url"
+                class="form-control fw-semibold fs-5"
+                id="url"
+                placeholder="Website URL "
+                oninput="validateInputs(this)"
+              />
+              <div class="alert alert-danger d-none mt-3">
+                Must Add Link Start with http:// or https:// and WWW. OR www.
+                And write Charcater minCharacter is 4 And .com Example ==>
+                https://www.google.com , https://www.facebook.com
+              </div>
+            </div>
+            <button
+              class="btn btn-danger text-capitalize mb-3 align-self-center"
+              onclick="addBook();
+              "
+            >
+              submit
+            </button>
+          </div>
+        </div>
+        <div class="col-md-12 mt-3">
+          <table class="table text-center">
+            <thead class="">
+              <tr>
+                <th>#</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="DataRow"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
